@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/girishkumarreddymallela/TODO-LIST.git/static/css/main.308a925e.css",
+    "main.js": "/girishkumarreddymallela/TODO-LIST.git/static/js/main.52a296bf.js",
+    "index.html": "/girishkumarreddymallela/TODO-LIST.git/index.html",
+    "main.308a925e.css.map": "/girishkumarreddymallela/TODO-LIST.git/static/css/main.308a925e.css.map",
+    "main.52a296bf.js.map": "/girishkumarreddymallela/TODO-LIST.git/static/js/main.52a296bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.308a925e.css",
+    "static/js/main.52a296bf.js"
+  ]
+}
