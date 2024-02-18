@@ -2,6 +2,22 @@
 
 This is a simple TODO list application built with React. It allows you to manage your tasks efficiently, thereby optimizing your work process and time management.
 
+# How to run
+
+STEP-1: Navigate to the GitHub repository page and click on the Code button. Select Download ZIP from the dropdown menu. This will download a ZIP file of the entire project to your local machine.
+
+STEP-2: Extract the Files: Locate the downloaded ZIP file on your computer. Right-click on the file and select Extract All... or a similar option. This will extract all the files from the ZIP file into a new folder.
+
+STEP-3: Open the Project in an IDE: Open your preferred Integrated Development Environment (IDE), such as Visual Studio Code. From the File menu, select Open Folder... and navigate to the extracted folder. Select the folder and click Open.
+
+STEP-4: Navigate to the Project Directory: Open the terminal in your IDE (In Visual Studio Code, you can do this by selecting Terminal > New Terminal from the top menu). The terminal should automatically be in the main project directory. If not, use the cd command to navigate into the project directory.
+
+STEP-5: Install the Dependencies: In the terminal, run the command npm install. This will install all the packages that are listed in the package.json file. These are the dependencies that your project needs to run correctly.
+
+STEP-6: Start the Project: Once all the dependencies are installed, you can start the project by running the command npm run start in the terminal. This will start the local development server and you should be able to see your project running by opening a web browser and navigating to http://localhost:3000 (or whatever URL/port your terminal indicates).
+
+Importantly make sure that u have node.js installed in your local machine.
+
 ## Features
 
 - Add new tasks with a title and description.
