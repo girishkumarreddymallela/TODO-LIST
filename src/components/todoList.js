@@ -2,14 +2,14 @@ import React from "react";
 import { useState } from "react";
 import "./todoList.css";
 import { useEffect } from "react";
-///////////////////////////////////////////////////////////////////////////////////////// COmponent start
+//////////////////////////////////////////////////////////////////////////////////////////////////          COmponent start
 const TODOLIST = () => {
   const [title, settitle] = useState("");
   const [task, settask] = useState("");
   const [enter, setenter] = useState("");
   const [filter, setFilter] = useState("ALL");
 
-  //////////////////////////////////////////////////////////////// ///////////     Getting stored value from local storage
+  ///////////////////////////////////////////////////////////////////////////     Getting stored value from local storage
   const [list, setlist] = useState(() => {
     const savedTasks = localStorage.getItem("tasks");
     if (savedTasks) {
@@ -22,7 +22,7 @@ const TODOLIST = () => {
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(list));
   }, [list]);
-  ////////////////////////////////////////////////////////////////////////////////////  Task handler function
+  /////////////////////////////////////////////////////////////////////////////////////////////        Task handler function
   const taskHandler = () => {
     if (title && task) {
       setlist([...list, { title, task, isChecked: false }]);
@@ -35,13 +35,13 @@ const TODOLIST = () => {
       }, 2000);
     }
   };
-  ////////////////////////////////////////////////////////////////////////////////////////////   Task deleter function
+  /////////////////////////////////////////////////////////////////////////////////////////////////////   Task deleter function
   const taskDeleter = (index) => {
     const newlist = [...list];
     newlist.splice(index, 1);
     setlist(newlist);
   };
-  //////////////////////////////////////////////////////////////////////////////////////////   Handle checkbox change function
+  ///////////////////////////////////////////////////////////////////////////////////////////////   Handle checkbox change function
   function handleCheckboxChange(index) {
     setlist((prevList) => {
       return prevList.map((item, i) => {
@@ -54,19 +54,19 @@ const TODOLIST = () => {
     });
   }
 
-  /////////////////////////////////////////////////////////////////////////////////      handle filter change function
+  ///////////////////////////////////////////////////////////////////////////////// //////////     handle filter change function
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
   };
 
-  /////////////////////////////////////////////////////////////////////////////////////   Filter the list based on the filter state
+  ///////////////////////////////////////////////////////////////////////////////////////////   Filter the list based on the filter state
   const filteredList = list.filter((item) => {
     if (filter === "ALL") return true;
     if (filter === "Completed Tasks" && item.isChecked) return true;
     if (filter === "Incompleted Tasks" && !item.isChecked) return true;
     return false;
   });
-  ///////////////////////////////////////////////////////////////////////////////////////////////////  JSX CODE START
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////  JSX CODE START
   return (
     <div className="A0">
       <section className="A1">
@@ -76,7 +76,7 @@ const TODOLIST = () => {
           thereby optimizing your work process and time management.
         </p>
       </section>
-      {/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      {/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       Section-2 (Form to add task and title, button, and image)
 */}
       <section className="A4">
@@ -126,7 +126,7 @@ const TODOLIST = () => {
           ></img>
         </div>
       </section>
-      {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       Tasks filter options using select tag */}
       <h1 style={{ textAlign: "center" }}>Tasks List</h1>
       <div>
@@ -136,14 +136,13 @@ const TODOLIST = () => {
           <option>Incompleted Tasks</option>
         </select>
       </div>
-      {/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      {/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       section-3 ( displaying list of tasks) */}
       <section className="A16">
         <ul className="A17">
           {filteredList.map((item, index) => {
             return (
               <li key={index} style={{ listStyle: "none" }} className="A18">
-                {/* Rest of your code... */}
                 <div className="A19">
                   <div className="task-title">
                     <h1 className="A20">{item.title}-</h1>
@@ -173,7 +172,7 @@ const TODOLIST = () => {
                     </h2>
                     <img
                       onClick={() => taskDeleter(index)}
-                      src="/delete.png"
+                      src="delete.png"
                       alt="Delete"
                       height={"27px"}
                       width={"27px"}
