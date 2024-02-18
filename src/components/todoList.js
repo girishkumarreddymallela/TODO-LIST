@@ -25,7 +25,8 @@ const TODOLIST = () => {
   /////////////////////////////////////////////////////////////////////////////////////////////        Task handler function
   const taskHandler = () => {
     if (title && task) {
-      setlist([...list, { title, task, isChecked: false }]);
+      setlist([{ title, task, isChecked: false }, ...list]);
+
       settitle("");
       settask("");
     } else {
